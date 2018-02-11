@@ -46,7 +46,7 @@ here.
 ## Atom
 
 Similar to Sublime but with easier package installation. Little bit slower though.
-With correct packages insatalled, you can code javascript/React here. I also use it
+With correct packages installed, you can code javascript/React here. I also use it
 for SQL and markdown.
 
 1. When writing markdown disable remove trailing spaces (as double space is new line in md).
@@ -65,12 +65,17 @@ for SQL and markdown.
 * multi-cursor
 * tree-ignore
 
-## IntelliJ
+## JetBrain products
 
-Most advanced IDE. I use it for all big projects (React, C++, Java, Android, Obj-C/Swift).
+Most advanced IDE. I use it for all big projects (C++, Java, Android, Obj-C/Swift).
 Using Dracula theme.
 
 ## Vi/Vim
 
 Used in terminal for really quick operations. Used as default for git.
+
+## Vs-code
+
+Lightweight editor with great plugin support and performance. Probably the best
+editor for coding React now.
 
