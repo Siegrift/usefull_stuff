@@ -2,8 +2,17 @@
 
 I have been using bunch of editors and stick to these.
 
+## Vs-code
+
+Lightweight editor with great plugin support and performance. Probably the best
+editor for coding React now. Extensions are synced using extension using personal
+gist on github.
+
+I use VSCode for JS, TS, C++, Latex.
+
 ## Sublime
 
+TIP: Use VSCode instead.
 Good for small programs, nice theme & simplicity.
 I use it for small C++ codes.
 On linux I had problems with diacritics, so it wasn't possible to write markdown
@@ -67,15 +76,9 @@ for SQL and markdown.
 
 ## JetBrain products
 
-Most advanced IDE. I use it for all big projects (C++, Java, Android, Obj-C/Swift).
+Most advanced IDE. I use it for all big projects (Kotlin, Java, Android, Obj-C/Swift).
 Using Dracula theme.
 
-## Vi/Vim
+## Xed
 
 Used in terminal for really quick operations. Used as default for git.
-
-## Vs-code
-
-Lightweight editor with great plugin support and performance. Probably the best
-editor for coding React now.
-
