@@ -27,4 +27,5 @@ Averta webfont
 Roboto
 
 ### Random usefull links
-* [photopea](https://www.photopea.com/) - In browser GIMP like image editor
+* [photopea](https://www.photopea.com/) - Online GIMP like image editor
+* [squoosh](https://squoosh.app/) - Online fast image compression
