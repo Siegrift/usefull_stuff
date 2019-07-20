@@ -1,4 +1,0 @@
-## Webfonts
-
-Averta webfont
-Roboto
