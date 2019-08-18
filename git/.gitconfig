@@ -65,6 +65,7 @@
     r = reset
     cp = cherry-pick
     gr = grep -Ii
+    diff2 = diff -- ':!package-lock.json' ':!yarn.lock'
     # }}}
     # tweak defaults {{{
     diff = diff --word-diff
