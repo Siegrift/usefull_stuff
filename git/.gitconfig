@@ -2,22 +2,14 @@
 # place to home/<username>
 # core {{{
 [core]
-	editor = vi
-    excludesfile = /Users/np/.gitignore_global
-    pager=less -x4
+	editor = xed
 
 #}}}
 # user {{{
 [user]
-    email = <email>
-    name = <github_username>
+	email = <<email>>
+	name = <<name>>
 
-#}}}
-# include sendemail config {{{
-[include]
-    path = ~/.git-sendemail
-# }}}
-# color {{{
 [color]
     branch = auto
     diff = auto
@@ -40,8 +32,6 @@
     changed = green
     untracked = cyan
 
-# }}}
-# push/pull/diff/options {{{
 [push]
     default = current
 [pull]
@@ -53,8 +43,6 @@
 [apply]
     whitespace = nowarn
 
-#}}}
-# alias {{{
 [alias]
     # basic {{{
     st = status -s
@@ -66,7 +54,6 @@
     cp = cherry-pick
     gr = grep -Ii
     diff2 = diff -- ':!package-lock.json' ':!yarn.lock'
-    # }}}
     # tweak defaults {{{
     diff = diff --word-diff
     branch = branch -ra
@@ -75,14 +62,12 @@
     ai = add --interactive
     # grep on filename
     f = "!git ls-files | grep -i"
-    # }}}
     # commit {{{
     cm = commit -m
     cma = commit -a -m
     ca = commit --amend
     amend = commit --amend
     caa = commit -a --amend -C HEAD
-    # }}}
     # log commands {{{
     ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
@@ -90,7 +75,6 @@
     lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
     fl = log -u
     filelog = log -u
-    # }}}
     # diff {{{
     d = diff --word-diff
     dc = diff --cached
@@ -98,24 +82,20 @@
     dlc = diff --cached HEAD^
     dr  = "!f() { git diff -w "$1"^.."$1"; }; f"
     diffr  = "!f() { git diff "$1"^.."$1"; }; f"
-    # }}}
     # reset commands {{{
     r1 = reset HEAD^
     r2 = reset HEAD^^
     rh = reset --hard
     rh1 = reset HEAD^ --hard
     rh2 = reset HEAD^^ --hard
-    # }}}
     # git svn {{{
     svnr = svn rebase
     svnd = svn dcommit
     svnl = svn log --oneline --show-commit
-    # }}}
     # stash {{{
     sl = stash list
     sa = stash apply
     ss = stash save
-    # }}}
     # assume aliases {{{
     assume = update-index --assume-unchanged
     unassume = update-index --no-assume-unchanged
@@ -124,15 +104,11 @@
     # unassume all the assumed files
     unassumeall = "!git assumed | xargs git update-index --no-assume-unchanged"
     assumeall = "!git status -s | awk {'print $2'} | xargs git assume"
-    # }}}
     # subtree {{{
-    #   add
     sba = "!f() { git subtree add --prefix $2 $1 master --squash; }; f"
     #   update/pull
     sbu = "!f() { git subtree pull --prefix $2 $1 master --squash; }; f"
-    # }}}
     # various useful {{{
-    # last tag created
     lasttag = describe --tags --abbrev=0
     lt = describe --tags --abbrev=0
 
@@ -156,7 +132,6 @@
 
     # list all aliases
     la = "!git config -l | grep alias | cut -c 7-"
-    # }}}
     # convoluted aliases {{{
     # grep from root folder
     gra = "!f() { A=$(pwd) && TOPLEVEL=$(git rev-parse --show-toplevel) && cd $TOPLEVEL && git grep --full-name -In $1 | xargs -I{} echo $TOPLEVEL/{} && cd $A; }; f"
@@ -164,13 +139,11 @@
     done = "!f() { git branch | grep "$1" | cut -c 3- | grep -v done | xargs -I{} git branch -m {} done-{}; }; f"
     #add bitbucket remote
     ra = "!f() { git remote add $1 https://bitbucket.org/$2.git; }; f"
-    # }}}
     # worktree list {{{
     wl = worktree list
     # undo from here http://megakemp.com/2016/08/25/git-undo/
     undo = "!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f"
-    # }}}
-# }}}
+
 [rerere]
   enabled = false
 [rebase]
